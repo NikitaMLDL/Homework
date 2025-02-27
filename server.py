@@ -13,7 +13,6 @@ def all_tasks():
     return jsonify(tasks)
 
 
-
 @app.route('/tasks/<int:task_id>', methods=['GET'])
 def particular_task(task_id):
     data = [task for task in tasks if task['id'] == task_id]
